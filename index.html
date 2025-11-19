@@ -300,13 +300,20 @@
         slides.style.transform = `translateX(-${index * 100}%)`;
     }
 
-    // Auto-play every 3 seconds
-    setInterval(() => {
-        moveSlide(1);
-    }, 4000);
+    function startSlider() {
+        let delay = (index === 0) ? 6000 : 3000; // 6 sec for 1st, 3 sec for others
+
+        setTimeout(() => {
+            moveSlide(1);
+            startSlider();   // recursive call to continue sliding
+        }, delay);
+    }
+
+    startSlider(); // start autoplay
 </script>
 </body>
 </html>
+
 
 
 

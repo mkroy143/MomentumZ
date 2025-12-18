@@ -42,6 +42,36 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="favicon.png">
     <style>
+			.video-section {
+			    max-width: 900px;
+			    margin: 25px auto;
+			    text-align: center;
+			}
+			
+			.video-title {
+			    color: #ffd700;
+			    margin-bottom: 12px;
+			}
+			
+			.video-wrapper {
+			    position: relative;
+			    width: 100%;
+			    max-width: 800px;   /* 👈 controls video width */
+			    margin: 0 auto;
+			    padding-bottom: 56.25%;
+			    height: 0;
+			    overflow: hidden;
+			    border-radius: 10px;
+			    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+			}
+			
+			.video-wrapper iframe {
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    width: 100%;
+			    height: 100%;
+			}
 
 		.top-right-link {
 		    position: absolute;
@@ -213,22 +243,22 @@
 <div class="container">
 	<a href="https://drive.usercontent.google.com/download?id=1sSNlntHl7sp3fHoG4GugtpRq2BgqhBwm&export=download&authuser=0" class="download-btn">⬇ Download MomentumZ</a>
 
-<!-- Tutorial Video -->
-<div style="max-width:900px; margin:20px auto; text-align:center;">
-    <h3 style="color:#ffd700; margin-bottom:10px;">
-        🎥 Watch How MomentumZ Works (2-Minute Tutorial)
-    </h3>
+	<!-- Tutorial Video -->
+	<div class="video-section">
+	    <h3 class="video-title">
+	        🎥 Watch MomentumZ in Action (Live Tutorial)
+	    </h3>
+	
+	    <div class="video-wrapper">
+	        <iframe 
+	            src="https://www.youtube.com/embed/TkDpTrEgz1I"
+	            frameborder="0"
+	            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+	            allowfullscreen>
+	        </iframe>
+	    </div>
+	</div>
 
-    <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.4);">
-        <iframe 
-            src="https://www.youtube.com/embed/VIDEO_ID_HERE"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            style="position:absolute; top:0; left:0; width:100%; height:100%;">
-        </iframe>
-    </div>
-</div>
 
 	
 	<p style="text-align: center; color: #ffd700; text-decoration: underline; font-size: 1.2em; font-family: Oswald;"><strong>If a stock’s price rises sharply in a very short time, it often has a high probability of falling again.</strong></p>
@@ -348,6 +378,7 @@
 </script>
 </body>
 </html>
+
 
 
 
